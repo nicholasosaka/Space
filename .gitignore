@@ -58,7 +58,7 @@ cmake-build-release/
 *.iws
 
 # IntelliJ
-out/
+out/production/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -129,3 +129,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+/out/production/Space/META-INF/
+/src/META-INF/
