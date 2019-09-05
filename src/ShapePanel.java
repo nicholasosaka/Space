@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class ShapePanel
-		extends JPanel {
+public class ShapePanel extends JPanel {
 	private Color[] colors = new Color[]{Color.RED, Color.BLUE, Color.ORANGE, Color.YELLOW};
 	private JFrame context;
 	public ArrayList<UserShape> userShapes;
