@@ -13,4 +13,24 @@ public class Panel extends JPanel {
 		this.frame = frame;
 		this.shapes = new ArrayList<>();
 	}
+
+	void addShape(Shape shape){
+		if(shape != null) {
+			this.shapes.add(shape);
+		}
+	}
+
+	void removeShape(Shape shape){
+		if(shape != null) {
+			this.shapes.remove(shape);
+		}
+	}
+
+	void removeAllShapes(){
+		this.shapes.clear();
+	}
+
+	public ArrayList<Shape> getShapes() {
+		return shapes;
+	}
 }
