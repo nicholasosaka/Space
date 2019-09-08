@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 /*
  * @author Nikko Osaka
@@ -67,6 +68,10 @@ public class Space {
 			}
 		}
 		return false;
+	}
+
+	public ArrayList<Shape> getShapes(){
+		return this.panel.getShapes();
 	}
 
 	private void update() {
