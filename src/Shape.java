@@ -39,7 +39,17 @@ public class Shape {
 	}
 
 	private void setRectangularPoints() {
+		x[0] = this.locX - this.width/2;
+		x[1] = this.locX + this.width/2;
 
+		y[0] = this.locY - this.height/2;
+		y[1] = y[0];
+
+		x[2] = x[0];
+		x[3] = x[1];
+
+		y[2] = this.locY + this.height/2;
+		y[3] = x[2];
 	}
 
 	private void setTrianglePoints(){
