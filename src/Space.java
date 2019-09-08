@@ -19,6 +19,22 @@ public class Space {
 		this.frame.setVisible(true);
 	}
 
+	public void addShape(Shape shape){
+		if(shape != null){
+			this.panel.addShape(shape);
+		}
+	}
+
+	public void addShape(int id, int locX, int locY, int width, int height){
+		Shape s = new Shape(id, this.panel.getHeight(), this.panel.getWidth(), locX, locY, width, height);
+		this.panel.addShape(s);
+	}
+
+	public void addShape(int id, int locX, int locY, int radius){
+		Shape s = new Shape(id, this.panel.getHeight(), this.panel.getWidth(), locX, locY, radius);
+		this.panel.addShape(s);
+	}
+
 	public void exit() {
 		this.frame.dispatchEvent(new WindowEvent(this.frame, WindowEvent.WINDOW_CLOSING));
 	}
