@@ -56,6 +56,8 @@ public class Space {
 	}
 
 	public boolean isPointInSpace(Shape point){
+		if(point == null) return false;
+
 		for(Shape s : this.panel.getShapes()){
 			if(!s.equals(point) && s.isPointInShape(point.getLocX(), point.getLocY())){
 				return true;
