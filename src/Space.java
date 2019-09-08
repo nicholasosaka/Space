@@ -44,6 +44,15 @@ public class Space {
 		return false;
 	}
 
+	public boolean isPointInShapes(Shape point){
+		for(Shape s : this.panel.getShapes()){
+			if(!s.equals(point) && s.isPointInShape(point.getLocX(), point.getLocY())){
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void exit() {
 		this.frame.dispatchEvent(new WindowEvent(this.frame, WindowEvent.WINDOW_CLOSING));
 	}
