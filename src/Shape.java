@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * @author Nikko Osaka
  * @date 9/7/2019
@@ -83,6 +85,21 @@ public class Shape {
 			//TODO finish other IDs
 		}
 		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = id;
+		result = 31 * result + getPanelSizeY();
+		result = 31 * result + getPanelSizeX();
+		result = 31 * result + getWidth();
+		result = 31 * result + getHeight();
+		result = 31 * result + getLocX();
+		result = 31 * result + getLocY();
+		result = 31 * result + getRadius();
+		result = 31 * result + Arrays.hashCode(x);
+		result = 31 * result + Arrays.hashCode(y);
+		return result;
 	}
 
 	public int getID(){
