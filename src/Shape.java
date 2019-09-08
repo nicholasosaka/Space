@@ -28,4 +28,20 @@ public class Shape {
 		this.panelSizeY = panelSizeY;
 		this.radius = radius;
 	}
+
+	public boolean isPointInShape(int x, int y) {
+		//TODO implement checkers
+		if (this.getID() == 3) {
+			if (Math.sqrt(Math.pow(this.locX - x, 2.0) + Math.pow(this.locY - y, 2.0)) < (double) this.radius) {
+				return true;
+			}
+		} else {
+			//TODO finish other IDs
+		}
+		return false;
+	}
+
+	public int getID(){
+		return this.id;
+	}
 }
