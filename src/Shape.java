@@ -76,13 +76,25 @@ public class Shape {
 	}
 
 	public boolean isPointInShape(int x, int y) {
-		//TODO implement checkers
 		if (this.getID() == 3) {
 			if (Math.sqrt(Math.pow(this.locX - x, 2.0) + Math.pow(this.locY - y, 2.0)) < (double) this.radius) {
 				return true;
 			}
-		} else {
-			//TODO finish other IDs
+		} else if (this.getID() == 0){
+			double[][] T = new double[2][2];
+			T[0][0] = this.x[0] - this.x[2];
+			T[0][1] = this.x[1] - this.x[2];
+			T[1][0] = this.y[0] - this.y[2];
+			T[1][1] = this.y[1] - this.y[2];
+			double detT = T[0][0] * T[1][1] - T[1][0] * T[0][1];
+			double alpha1 = (this.y[1] - this.y[2]) * (x - this.x[2]) + (this.x[2] - this.x[1]) * (y - this.y[2]);
+			double alpha2 = (this.y[2] - this.y[0]) * (x - this.x[2]) + (this.x[0] - this.x[2]) * (y - this.y[2]);
+			double alpha3 = 1.0 - (alpha1 /= detT) - (alpha2 /= detT);
+			if (alpha1 >= 0.0 && alpha2 >= 0.0 && alpha3 >= 0.0) {
+				return true;
+			}
+		} else if ((this.getID() == 1 || this.getID() == 2) && x > this.locX - this.width / 2 && x < this.locX + this.width / 2 && y > this.locY - this.height / 2 && y < this.locY + this.height / 2) {
+			return true;
 		}
 		return false;
 	}
