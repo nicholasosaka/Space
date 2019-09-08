@@ -23,16 +23,19 @@ public class Space {
 		if(shape != null){
 			this.panel.addShape(shape);
 		}
+		update();
 	}
 
 	public void addShape(int id, int locX, int locY, int width, int height){
 		Shape s = new Shape(id, this.panel.getHeight(), this.panel.getWidth(), locX, locY, width, height);
 		this.panel.addShape(s);
+		update();
 	}
 
 	public void addShape(int id, int locX, int locY, int radius){
 		Shape s = new Shape(id, this.panel.getHeight(), this.panel.getWidth(), locX, locY, radius);
 		this.panel.addShape(s);
+		update();
 	}
 
 	public boolean isShapeInSpace(Shape shape){
@@ -64,6 +67,10 @@ public class Space {
 			}
 		}
 		return false;
+	}
+
+	private void update() {
+		this.frame.repaint();
 	}
 
 	public void exit() {
