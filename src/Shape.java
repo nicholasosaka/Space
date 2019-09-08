@@ -29,6 +29,18 @@ public class Shape {
 		this.radius = radius;
 	}
 
+	private void populatePointData(){
+		if(this.id == 0){
+			setTrianglePoints();
+		} else if (this.id == 1 || this.id == 2){
+			setRectangularPoints();
+		}
+	}
+
+	private void setRectangularPoints() {
+
+	}
+
 	private void setTrianglePoints(){
 		x[0] = Math.max(this.locX - this.width / 2, 0);
 		y[0] = Math.max(this.locY - this.height / 2, 0);
