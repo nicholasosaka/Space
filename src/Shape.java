@@ -88,4 +88,32 @@ public class Shape {
 	public int getID(){
 		return this.id;
 	}
+
+	public int getPanelSizeY() {
+		return panelSizeY;
+	}
+
+	public int getPanelSizeX() {
+		return panelSizeX;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getLocX() {
+		return locX;
+	}
+
+	public int getLocY() {
+		return locY;
+	}
+
+	public int getRadius() {
+		return radius;
+	}
 }
