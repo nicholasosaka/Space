@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.event.WindowEvent;
 
 /*
  * @author Nikko Osaka
@@ -17,4 +18,9 @@ public class Space {
 		this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.frame.setVisible(true);
 	}
+
+	public void exit() {
+		this.frame.dispatchEvent(new WindowEvent(this.frame, WindowEvent.WINDOW_CLOSING));
+	}
+
 }
