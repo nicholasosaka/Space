@@ -15,4 +15,16 @@ class SpaceTest {
 		space.addShape(1,100,100,100,100);
 		assertEquals(2, space.getShapes().size());
 	}
+
+	@Test
+	void multipleShapesShouldPopulateProperly() {
+		Space space = new Space("multipleShapesShouldPopulateProperly", 500,500);
+
+		for(int i = 0; i < 5; i++) {
+			space.addShape(i % 4, 100, 100, 100, 100);
+		}
+
+		assertEquals(5, space.getShapes().size());
+
+	}
 }
