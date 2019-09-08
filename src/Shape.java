@@ -29,6 +29,27 @@ public class Shape {
 		this.radius = radius;
 	}
 
+	private void setTrianglePoints(){
+		x[0] = Math.max(this.locX - this.width / 2, 0);
+		y[0] = Math.max(this.locY - this.height / 2, 0);
+
+		if(this.locX + this.width / 2 > this.panelSizeX){
+			x[1] = this.panelSizeX;
+			x[2] = this.panelSizeX;
+		} else {
+			x[1] = this.locX;
+			x[2] = this.locX + this.width / 2;
+		}
+
+		if(this.locY + this.height / 2 > this.panelSizeY){
+			y[1] = this.panelSizeY;
+			y[2] = this.panelSizeY;
+		} else {
+			y[1] = this.locY;
+			y[2] = y[0];
+		}
+	}
+
 	public boolean isPointInShape(int x, int y) {
 		//TODO implement checkers
 		if (this.getID() == 3) {
