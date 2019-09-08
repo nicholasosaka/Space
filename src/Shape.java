@@ -137,6 +137,14 @@ public class Shape {
 		return this.id;
 	}
 
+	public int[] getX() {
+		return x;
+	}
+
+	public int[] getY() {
+		return y;
+	}
+
 	public int getPanelSizeY() {
 		return panelSizeY;
 	}
