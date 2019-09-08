@@ -4,7 +4,8 @@
  */
 public class Shape {
 	private int id, panelSizeY, panelSizeX, width, height, locX, locY, radius;
-	private int[] x, y;
+	private int[] x = new int[4];
+	private int[] y = new int[4];
 
 	Shape(int id, int panelSizeX, int panelSizeY, int locX, int locY, int width, int height) {
 		this(id, locX, locY, width, height);
