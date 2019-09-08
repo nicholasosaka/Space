@@ -88,6 +88,20 @@ public class Shape {
 	}
 
 	@Override
+	public boolean equals(Object o){
+		if(o == null || this.getClass() != o.getClass()){
+			return false;
+		}
+
+		if(this == o){
+			return true;
+		}
+
+		Shape s = (Shape)o;
+		return this.hashCode() == o.hashCode();
+
+	}
+	@Override
 	public int hashCode() {
 		int result = id;
 		result = 31 * result + getPanelSizeY();
