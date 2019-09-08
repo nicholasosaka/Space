@@ -35,6 +35,17 @@ public class Space {
 		this.panel.addShape(s);
 	}
 
+	public boolean isShapeInSpace(Shape shape){
+		if(shape == null) return false;
+
+		for(Shape s : this.panel.getShapes()){
+			if(s.equals(shape)){
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public boolean isPointInShapes(int x, int y){
 		for(Shape s : this.panel.getShapes()){
 			if(s.isPointInShape(x,y)){
