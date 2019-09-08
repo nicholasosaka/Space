@@ -116,6 +116,11 @@ public class Shape {
 		return result;
 	}
 
+	@Override
+	public String toString(){
+		return "Shape{id=" + this.id + ", locY=" + this.locY + ", locX=" + this.locX + ", width=" + this.width + ", height=" + this.height + ", radius=" + this.radius + ", x[]=" + Arrays.toString(this.x) + ", y[]=" + Arrays.toString(this.y) + '}';
+	}
+
 	public int getID(){
 		return this.id;
 	}
