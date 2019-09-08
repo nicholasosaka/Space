@@ -7,7 +7,7 @@ public class Shape {
 	private int[] x, y;
 
 	Shape(int id, int panelSizeX, int panelSizeY, int locX, int locY, int width, int height) {
-		this(id, locY, locX, width, height);
+		this(id, locX, locY, width, height);
 		this.panelSizeX = panelSizeX;
 		this.panelSizeY = panelSizeY;
 	}
