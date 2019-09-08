@@ -13,7 +13,6 @@ public class Space {
 		this.frame.setSize(width, length);
 		this.panel = new Panel(this.frame);
 		this.frame.add(this.panel);
-		this.frame.pack();
 		this.frame.repaint();
 		this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.frame.setVisible(true);
