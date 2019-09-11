@@ -21,6 +21,7 @@ public class Shape {
 		this.locX = locX;
 		this.width = width;
 		this.height = height;
+		populatePointData();
 	}
 
 	Shape(int id, int panelSizeX, int panelSizeY, int locX, int locY, int radius){
@@ -30,6 +31,7 @@ public class Shape {
 		this.panelSizeX = panelSizeX;
 		this.panelSizeY = panelSizeY;
 		this.radius = radius;
+		populatePointData();
 	}
 
 	private void populatePointData(){
