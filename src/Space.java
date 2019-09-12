@@ -86,6 +86,23 @@ public class Space {
 		this.panel.removeAllShapes();
 	}
 
+	//TODO finish implementation of  all movement directions
+	public void moveLeft(){
+
+	}
+
+	public void moveRight(){
+
+	}
+
+	public void moveUp(){
+
+	}
+
+	public void moveDown(){
+
+	}
+
 	/**
 	 * Method to check if a shape is in the Space
 	 * @param shape shape to check
