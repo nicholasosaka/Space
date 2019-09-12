@@ -94,4 +94,29 @@ public class Space {
 		this.frame.dispatchEvent(new WindowEvent(this.frame, WindowEvent.WINDOW_CLOSING));
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Space space = (Space) o;
+
+		if (!frame.equals(space.frame)) return false;
+		return panel.equals(space.panel);
+	}
+
+	@Override
+	public int hashCode() {
+		int result = frame.hashCode();
+		result = 31 * result + panel.hashCode();
+		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "Space{" +
+				"frame=" + frame +
+				", panel=" + panel +
+				'}';
+	}
 }
