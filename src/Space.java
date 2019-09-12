@@ -117,6 +117,11 @@ public class Space {
 		return false;
 	}
 
+	/**
+	 * Method to check if a point is in a shape within the Space
+	 * @param point point to check
+	 * @return true if point is within a shape in Space, false otherwise
+	 */
 	public boolean isPointInSpace(Shape point){
 		if(point == null) return false;
 
@@ -128,18 +133,33 @@ public class Space {
 		return false;
 	}
 
+	/**
+	 * Methid to get the list of shapes within Space
+	 * @return list of shapes in Space
+	 */
 	public ArrayList<Shape> getShapes(){
 		return this.panel.getShapes();
 	}
 
+	/**
+	 * Method to redraw Space graphics
+	 */
 	private void update() {
 		this.frame.repaint();
 	}
 
+	/**
+	 * Method to close Space window
+	 */
 	public void exit() {
 		this.frame.dispatchEvent(new WindowEvent(this.frame, WindowEvent.WINDOW_CLOSING));
 	}
 
+	/**
+	 * Method to check if Space object is equal to another object
+	 * @param o object to check against
+	 * @return true if equal, false otherwise
+	 */
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -151,6 +171,10 @@ public class Space {
 		return panel.equals(space.panel);
 	}
 
+	/**
+	 * Method to determine hashcode of Space objects
+	 * @return integer hashcode
+	 */
 	@Override
 	public int hashCode() {
 		int result = frame.hashCode();
@@ -158,6 +182,10 @@ public class Space {
 		return result;
 	}
 
+	/**
+	 * Method to claim a toString override
+	 * @return String format for output
+	 */
 	@Override
 	public String toString() {
 		return "Space{" +
