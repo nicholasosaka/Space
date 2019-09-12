@@ -100,7 +100,6 @@ public class Shape {
 			return true;
 		}
 
-		Shape s = (Shape)o;
 		return this.hashCode() == o.hashCode();
 
 	}
