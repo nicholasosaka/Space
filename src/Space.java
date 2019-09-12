@@ -39,6 +39,18 @@ public class Space {
 		update();
 	}
 
+	public void remove(Shape shape){
+		this.panel.removeShape(shape);
+	}
+
+	public void remove(int index){
+		this.panel.remove(index);
+	}
+
+	public void removeAll(){
+		this.panel.removeAllShapes();
+	}
+
 	public boolean isShapeInSpace(Shape shape){
 		if(shape == null) return false;
 
