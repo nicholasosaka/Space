@@ -87,11 +87,10 @@ public class Space {
 		this.panel.removeAllShapes();
 	}
 
-	//TODO finish implementation of  all movement directions
 	public void moveLeft(Shape shape, int pixels, int increment){
 		if(increment <= 0) increment = 1;
 		if(shape == null) return;
-		System.out.println(shape);
+
 		try {
 			for (int i = 0; i < pixels; i += increment) {
 				shape.setLocX(shape.getLocX() - increment);
@@ -105,16 +104,55 @@ public class Space {
 		}
 	}
 
-	public void moveRight(){
+	public void moveRight(Shape shape, int pixels, int increment){
+		if(increment <= 0) increment = 1;
+		if(shape == null) return;
 
+		try {
+			for (int i = 0; i < pixels; i += increment) {
+				shape.setLocX(shape.getLocX() + increment);
+				shape.populatePointData();
+
+				Thread.sleep(speed);
+				this.frame.repaint();
+			}
+		}catch(InterruptedException ie){
+			System.out.println("Failure to move " + shape);
+		}
 	}
 
-	public void moveUp(){
+	public void moveUp(Shape shape, int pixels, int increment){
+		if(increment <= 0) increment = 1;
+		if(shape == null) return;
 
+		try {
+			for (int i = 0; i < pixels; i += increment) {
+				shape.setLocY(shape.getLocY() - increment);
+				shape.populatePointData();
+
+				Thread.sleep(speed);
+				this.frame.repaint();
+			}
+		}catch(InterruptedException ie){
+			System.out.println("Failure to move " + shape);
+		}
 	}
 
-	public void moveDown(){
+	public void moveDown(Shape shape, int pixels, int increment){
+		if(increment <= 0) increment = 1;
+		if(shape == null) return;
 
+		try {
+			for (int i = 0; i < pixels; i += increment) {
+				shape.setLocY(shape.getLocY() + increment);
+				shape.populatePointData();
+
+				Thread.sleep(speed);
+				this.frame.repaint();
+			}
+		}catch(InterruptedException ie){
+			System.out.println("Failure to move " + shape);
+		}
 	}
 
 	/**
