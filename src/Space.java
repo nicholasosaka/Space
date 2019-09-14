@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Space {
 	private JFrame frame;
 	private Panel panel;
+	private int speed = 50;
 
 	/**
 	 * Constructor for Space objects
@@ -87,7 +88,23 @@ public class Space {
 	}
 
 	//TODO finish implementation of  all movement directions
-	public void moveLeft(){
+	public void moveLeft(Shape shape, int pixels, int increment){
+		if(increment <= 0) increment = 1;
+		if(shape == null) return;
+		System.out.println(shape);
+		try {
+			for (int i = 0; i < pixels; i += increment) {
+				shape.setLocX(shape.getLocX() - increment);
+				shape.populatePointData();
+
+				Thread.sleep(speed);
+				this.frame.repaint();
+			}
+		}catch(InterruptedException ie){
+			System.out.println("Failure to move " + shape);
+		}
+
+		System.out.println(shape);
 
 	}
 
@@ -156,6 +173,10 @@ public class Space {
 	 */
 	public ArrayList<Shape> getShapes(){
 		return this.panel.getShapes();
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
 	/**
