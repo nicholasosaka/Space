@@ -104,8 +104,6 @@ public class Space {
 			System.out.println("Failure to move " + shape);
 		}
 
-		System.out.println(shape);
-
 	}
 
 	public void moveRight(){
