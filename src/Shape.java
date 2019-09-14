@@ -162,4 +162,12 @@ public class Shape {
 	public int getRadius() {
 		return radius;
 	}
+
+	public void setLocY(int y) {
+		this.locY = y;
+	}
+
+	public void setLocX(int x){
+		this.locX = x;
+	}
 }
