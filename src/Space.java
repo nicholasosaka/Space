@@ -103,7 +103,6 @@ public class Space {
 		}catch(InterruptedException ie){
 			System.out.println("Failure to move " + shape);
 		}
-
 	}
 
 	public void moveRight(){
