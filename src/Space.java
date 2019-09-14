@@ -173,7 +173,7 @@ public class Space {
 	}
 
 	public void setSpeed(int speed) {
-		this.speed = speed;
+		this.speed = (int)((1.0/speed)*250);
 	}
 
 	/**
