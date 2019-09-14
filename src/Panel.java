@@ -11,7 +11,7 @@ public class Panel extends JPanel {
 	private ArrayList<Shape> shapes;
 	private Color[] colors = new Color[]{Color.BLUE, Color.RED, Color.GREEN, Color.YELLOW, Color.MAGENTA};
 
-	public Panel(JFrame frame) {
+	Panel(JFrame frame) {
 		this.frame = frame;
 		this.shapes = new ArrayList<>();
 	}
