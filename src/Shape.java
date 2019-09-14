@@ -34,7 +34,7 @@ public class Shape {
 		populatePointData();
 	}
 
-	private void populatePointData(){
+	protected void populatePointData(){
 		if(this.id == 0){
 			setTrianglePoints();
 		} else if (this.id == 1 || this.id == 2){
