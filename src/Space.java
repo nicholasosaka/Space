@@ -87,6 +87,12 @@ public class Space {
 		this.panel.removeAllShapes();
 	}
 
+	/**
+	 * Method to move a given shape to the left
+	 * @param shape Shape to move
+	 * @param pixels number of pixels to move shape by
+	 * @param increment how far the shape should be moved at a time (in pixels)
+	 */
 	public void moveLeft(Shape shape, int pixels, int increment){
 		if(increment <= 0) increment = 1;
 		if(shape == null) return;
@@ -104,6 +110,12 @@ public class Space {
 		}
 	}
 
+	/**
+	 * Method to move a given shape to the right
+	 * @param shape Shape to move
+	 * @param pixels number of pixels to move shape by
+	 * @param increment how far the shape should be moved at a time (in pixels)
+	 */
 	public void moveRight(Shape shape, int pixels, int increment){
 		if(increment <= 0) increment = 1;
 		if(shape == null) return;
@@ -121,6 +133,12 @@ public class Space {
 		}
 	}
 
+	/**
+	 * Method to move a given shape upwards
+	 * @param shape Shape to move
+	 * @param pixels number of pixels to move shape by
+	 * @param increment how far the shape should be moved at a time (in pixels)
+	 */
 	public void moveUp(Shape shape, int pixels, int increment){
 		if(increment <= 0) increment = 1;
 		if(shape == null) return;
@@ -138,6 +156,12 @@ public class Space {
 		}
 	}
 
+	/**
+	 * Method to move a given shape downwards
+	 * @param shape Shape to move
+	 * @param pixels number of pixels to move shape by
+	 * @param increment how far the shape should be moved at a time (in pixels)
+	 */
 	public void moveDown(Shape shape, int pixels, int increment){
 		if(increment <= 0) increment = 1;
 		if(shape == null) return;
@@ -210,6 +234,10 @@ public class Space {
 		return this.panel.getShapes();
 	}
 
+	/**
+	 * Method to change speed at which shapes move
+	 * @param speed integer from 1 to 30
+	 */
 	public void setSpeed(int speed) {
 		if(speed < 1) speed = 1;
 		if(speed > 30) speed = 30;
