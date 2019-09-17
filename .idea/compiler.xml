@@ -9,8 +9,5 @@
         <module name="Space" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Space" target="7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
