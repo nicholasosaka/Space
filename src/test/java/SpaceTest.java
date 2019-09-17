@@ -2,10 +2,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-class SpaceTest {
+public class SpaceTest {
 
 	@Test
-	void addShapeShouldAddShape() {
+	public void addShapeShouldAddShape() {
 		Space space = new Space("addShapeShouldAddShape", 500, 500);
 
 		Shape s = new Shape(1,100,100,100,100);
@@ -17,7 +17,7 @@ class SpaceTest {
 	}
 
 	@Test
-	void multipleShapesShouldPopulateProperly() {
+	public void multipleShapesShouldPopulateProperly() {
 		Space space = new Space("multipleShapesShouldPopulateProperly", 500,500);
 
 		for(int i = 0; i < 5; i++) {
