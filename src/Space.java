@@ -211,6 +211,8 @@ public class Space {
 	}
 
 	public void setSpeed(int speed) {
+		if(speed < 1) speed = 1;
+		if(speed > 30) speed = 30;
 		this.speed = (int)((1.0/speed)*250);
 	}
 
