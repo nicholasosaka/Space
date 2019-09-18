@@ -51,8 +51,8 @@ public class Panel extends JPanel {
 					break;
 				}
 				case 3: {
-					g.drawOval(userShape.getLocX() - userShape.getWidth() / 2, userShape.getLocY() - userShape.getHeight() / 2, userShape.getWidth(), userShape.getHeight());
-					g.fillOval(userShape.getLocX() - userShape.getWidth() / 2, userShape.getLocY() - userShape.getHeight() / 2, userShape.getWidth(), userShape.getHeight());
+					g.drawOval(userShape.getLocX() - userShape.getRadius() / 2, userShape.getLocY() - userShape.getRadius() / 2, userShape.getRadius(), userShape.getRadius());
+					g.fillOval(userShape.getLocX() - userShape.getRadius() / 2, userShape.getLocY() - userShape.getRadius() / 2, userShape.getRadius(), userShape.getRadius());
 				}
 			}
 			if(index == colors.length){
