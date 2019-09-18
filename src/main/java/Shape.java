@@ -39,7 +39,23 @@ public class Shape {
 			setTrianglePoints();
 		} else if (this.id == 1 || this.id == 2){
 			setRectangularPoints();
+		} else {
+			setCircularPoints();
 		}
+	}
+
+	private void setCircularPoints() {
+		x[0] = this.locX - this.radius/2;
+		x[1] = this.locX + this.radius/2;
+
+		y[0] = this.locY - this.radius/2;
+		y[1] = y[0];
+
+		x[2] = x[0];
+		x[3] = x[1];
+
+		y[2] = this.locY + this.radius/2;
+		y[3] = x[2];
 	}
 
 	private void setRectangularPoints() {
