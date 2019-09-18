@@ -97,6 +97,7 @@ public class Shape {
 	 */
 	public boolean intersect(Shape shape){
 		//TODO finish intersection logic
+
 		return false;
 	}
 
@@ -113,6 +114,7 @@ public class Shape {
 		return this.hashCode() == o.hashCode();
 
 	}
+
 	@Override
 	public int hashCode() {
 		int result = id;
