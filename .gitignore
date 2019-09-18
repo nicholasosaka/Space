@@ -132,3 +132,5 @@ Temporary Items
 
 /out/production/Space/META-INF/
 /src/META-INF/
+
+**/target/**
