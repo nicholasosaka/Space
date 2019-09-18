@@ -5,7 +5,11 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest, windows-latest]
+        java_version: [8, 11]
 
     steps:
     - uses: actions/checkout@v1
