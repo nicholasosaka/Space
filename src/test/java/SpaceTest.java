@@ -26,6 +26,24 @@ public class SpaceTest {
 	}
 
 	@Test
+	public void addTriangle() {
+		Space space = new Space("addTriangle", 500, 500);
+
+		Shape s = new Shape(0,500,250,250,100);
+		space.addShape(s);
+		assertEquals(0, space.getShapes().get(0).getID());
+	}
+
+	@Test
+	public void addRectangle() {
+		Space space = new Space("addCircle", 500, 500);
+
+		Shape s = new Shape(2,500,250,250,100);
+		space.addShape(s);
+		assertEquals(2, space.getShapes().get(0).getID());
+	}
+
+	@Test
 	public void multipleShapesShouldPopulateProperly() {
 		Space space = new Space("multipleShapesShouldPopulateProperly", 500,500);
 
