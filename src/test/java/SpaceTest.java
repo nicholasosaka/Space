@@ -17,6 +17,15 @@ public class SpaceTest {
 	}
 
 	@Test
+	public void addCircle() {
+		Space space = new Space("addCircle", 500, 500);
+
+		Shape s = new Shape(4,500,250,250,100);
+		space.addShape(s);
+		assertEquals(4, space.getShapes().get(0).getID());
+	}
+
+	@Test
 	public void multipleShapesShouldPopulateProperly() {
 		Space space = new Space("multipleShapesShouldPopulateProperly", 500,500);
 
