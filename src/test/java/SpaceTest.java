@@ -54,4 +54,15 @@ public class SpaceTest {
 		assertEquals(5, space.getShapes().size());
 
 	}
+
+	@Test
+	public void pointCheckForTriangle(){
+		Space space = new Space("pointCheckForTriangle", 500, 500);
+
+		space.addShape(0,250,250,100,100);
+
+		assertEquals(true, space.isPointInSpace(250,250));
+
+		assertEquals(false, space.isPointInSpace(100,100));
+	}
 }
