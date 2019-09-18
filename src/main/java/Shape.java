@@ -90,6 +90,16 @@ public class Shape {
 		} else return (this.getID() == 1 || this.getID() == 2) && x > this.locX - this.width / 2 && x < this.locX + this.width / 2 && y > this.locY - this.height / 2 && y < this.locY + this.height / 2;
 	}
 
+	/**
+	 * Method to check if two shapes intersect
+	 * @param shape shape to check this shape against
+	 * @return true if intersection, false otherwise
+	 */
+	public boolean intersect(Shape shape){
+		//TODO finish intersection logic
+		return false;
+	}
+
 	@Override
 	public boolean equals(Object o){
 		if(o == null || this.getClass() != o.getClass()){
