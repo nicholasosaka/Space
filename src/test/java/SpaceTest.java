@@ -65,4 +65,26 @@ public class SpaceTest {
 
 		assertEquals(false, space.isPointInSpace(100,100));
 	}
+
+	@Test
+	public void pointCheckForCircle(){
+		Space space = new Space("pointCheckForCircle", 500, 500);
+
+		space.addShape(250, 250, 100);
+
+		assertEquals(true, space.isPointInSpace(250,250));
+
+		assertEquals(false, space.isPointInSpace(100,100));
+	}
+
+	@Test
+	public void pointCheckForRectangle(){
+		Space space = new Space("pointCheckForRectangle", 500, 500);
+
+		space.addShape(2,250, 250, 100,100);
+
+		assertEquals(true, space.isPointInSpace(250,250));
+
+		assertEquals(false, space.isPointInSpace(100,100));
+	}
 }
