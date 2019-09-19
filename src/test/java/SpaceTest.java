@@ -109,4 +109,16 @@ public class SpaceTest {
 
 		assertEquals(false, space.isPointInSpace(p));
 	}
+
+	@Test
+	public void checkSpaceContents(){
+		Space space = new Space("checkSpaceContents", 500, 500);
+		Shape s = new Shape(3, 500, 500, 250, 250, 100);
+		Shape q = new Shape(3, 500, 500, 250, 250, 100);
+		space.addShape(s);
+
+
+		assertEquals(true, space.isShapeInSpace(s));
+		assertEquals(true, space.isShapeInSpace(q));
+	}
 }
