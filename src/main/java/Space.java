@@ -65,6 +65,17 @@ public class Space {
 	}
 
 	/**
+	 * Method to add point to Space
+	 * @param x x coordinate of point
+	 * @param y y coordinate of point
+	 */
+	public void addPoint(int x, int y){
+		Shape p = new Shape(3, this.panel.getHeight(), this.panel.getWidth(), x, y, 10);
+		this.panel.addShape(p);
+		update();
+	}
+
+	/**
 	 * Method to remove shape from Space
 	 * @param shape desired shape to remove from Space
 	 */
