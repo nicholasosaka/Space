@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Space JUnit" type="JUnit" factoryName="JUnit" singleton="false" repeat_count="25" repeat_mode="N Times">
+  <configuration default="false" name="Space JUnit" type="JUnit" factoryName="JUnit" singleton="false" repeat_count="2" repeat_mode="N Times">
     <module name="Space" />
     <option name="PACKAGE_NAME" value="" />
     <option name="MAIN_CLASS_NAME" value="SpaceTest" />
