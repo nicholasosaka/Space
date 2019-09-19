@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class SpaceTest {
 
@@ -61,9 +61,9 @@ public class SpaceTest {
 
 		space.addShape(0,250,250,100,100);
 
-		assertEquals(true, space.isPointInSpace(250,250));
+		assertTrue(space.isPointInSpace(250, 250));
 
-		assertEquals(false, space.isPointInSpace(100,100));
+		assertFalse(space.isPointInSpace(100, 100));
 	}
 
 	@Test
@@ -72,9 +72,9 @@ public class SpaceTest {
 
 		space.addShape(250, 250, 100);
 
-		assertEquals(true, space.isPointInSpace(250,250));
+		assertTrue(space.isPointInSpace(250, 250));
 
-		assertEquals(false, space.isPointInSpace(100,100));
+		assertFalse(space.isPointInSpace(100, 100));
 	}
 
 	@Test
@@ -83,9 +83,9 @@ public class SpaceTest {
 
 		space.addShape(2,250, 250, 100,100);
 
-		assertEquals(true, space.isPointInSpace(250,250));
+		assertTrue(space.isPointInSpace(250, 250));
 
-		assertEquals(false, space.isPointInSpace(100,100));
+		assertFalse(space.isPointInSpace(100, 100));
 	}
 
 	@Test
@@ -94,9 +94,9 @@ public class SpaceTest {
 		Shape p = new Shape(3, 500, 500, 250, 250, 5);
 		space.addShape(250, 250, 100);
 
-		assertEquals(true, space.isPointInSpace(250,250));
+		assertTrue(space.isPointInSpace(250, 250));
 
-		assertEquals(true, space.isPointInSpace(p));
+		assertTrue(space.isPointInSpace(p));
 	}
 
 	@Test
@@ -105,9 +105,9 @@ public class SpaceTest {
 		Shape p = new Shape(3, 500, 500, 5, 5, 5);
 		space.addShape(250, 250, 50);
 
-		assertEquals(false, space.isPointInSpace(455,455));
+		assertFalse(space.isPointInSpace(455, 455));
 
-		assertEquals(false, space.isPointInSpace(p));
+		assertFalse(space.isPointInSpace(p));
 	}
 
 	@Test
@@ -118,7 +118,7 @@ public class SpaceTest {
 		space.addShape(s);
 
 
-		assertEquals(true, space.isShapeInSpace(s));
-		assertEquals(true, space.isShapeInSpace(q));
+		assertTrue(space.isShapeInSpace(s));
+		assertTrue(space.isShapeInSpace(q));
 	}
 }
