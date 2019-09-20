@@ -1,7 +1,7 @@
-public class Point extends Shape{
+public class Point extends Circle{
 
-	Point(int panelSizeX, int panelSizeY, int locX, int locY) {
-		super(3, locX, locY, 10);
+	Point(int locX, int locY) {
+		super(locX, locY, 10);
 	}
 
 }
