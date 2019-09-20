@@ -47,7 +47,7 @@ public class Space {
 	 * @param height height of the shape
 	 */
 	public void addShape(int id, int locX, int locY, int width, int height){
-		Shape s = new Shape(id, this.panel.getHeight(), this.panel.getWidth(), locX, locY, width, height);
+		Shape s = new Shape(id, locX, locY, width, height);
 		this.panel.addShape(s);
 		update();
 	}
@@ -59,7 +59,7 @@ public class Space {
 	 * @param radius radius of the shape
 	 */
 	public void addShape(int locX, int locY, int radius){
-		Shape s = new Shape(3, this.panel.getHeight(), this.panel.getWidth(), locX, locY, radius);
+		Shape s = new Shape(3, locX, locY, radius);
 		this.panel.addShape(s);
 		update();
 	}
@@ -70,7 +70,7 @@ public class Space {
 	 * @param y y coordinate of point
 	 */
 	public void addPoint(int x, int y){
-		Shape p = new Shape(3, this.panel.getHeight(), this.panel.getWidth(), x, y, 10);
+		Shape p = new Shape(3, x, y, 10);
 		this.panel.addShape(p);
 		update();
 	}

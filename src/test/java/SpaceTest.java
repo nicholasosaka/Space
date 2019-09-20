@@ -80,7 +80,7 @@ public class SpaceTest {
 
 	@Test
 	public void pointInSpaceTrue(){
-		Shape p = new Shape(3, 500, 500, 250, 250, 5);
+		Shape p = new Shape(3, 250, 250, 5);
 		space.addShape(250, 250, 100);
 
 		assertTrue(space.isPointInSpace(250, 250));
@@ -90,7 +90,7 @@ public class SpaceTest {
 
 	@Test
 	public void pointInSpaceFalse(){
-		Shape p = new Shape(3, 500, 500, 5, 5, 5);
+		Shape p = new Shape(3,5, 5, 5);
 		space.addShape(250, 250, 50);
 
 		assertFalse(space.isPointInSpace(455, 455));
@@ -100,8 +100,8 @@ public class SpaceTest {
 
 	@Test
 	public void checkSpaceContents(){
-		Shape s = new Shape(3, 500, 500, 250, 250, 100);
-		Shape q = new Shape(3, 500, 500, 250, 250, 100);
+		Shape s = new Shape(3, 250, 250, 100);
+		Shape q = new Shape(3, 250, 250, 100);
 		space.addShape(s);
 
 		assertTrue(space.isShapeInSpace(s));

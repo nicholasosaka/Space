@@ -5,17 +5,11 @@ import java.util.Arrays;
  * @date 9/7/2019
  */
 public class Shape {
-	private int id, panelSizeY, panelSizeX, width, height, locX, locY, radius;
+	private int id, width, height, locX, locY, radius;
 	private int[] x = new int[4];
 	private int[] y = new int[4];
 
-	Shape(int id, int panelSizeX, int panelSizeY, int locX, int locY, int width, int height) {
-		this(id, locX, locY, width, height);
-		this.panelSizeX = panelSizeX;
-		this.panelSizeY = panelSizeY;
-	}
-
-	Shape(int id, int locX, int locY, int width, int height){
+	Shape(int id,int locX, int locY, int width, int height) {
 		this.id = id;
 		this.locY = locY;
 		this.locX = locX;
@@ -24,12 +18,10 @@ public class Shape {
 		populatePointData();
 	}
 
-	Shape(int id, int panelSizeX, int panelSizeY, int locX, int locY, int radius){
+	Shape(int id, int locX, int locY, int radius){
 		this.id = id;
 		this.locY = locY;
 		this.locX = locX;
-		this.panelSizeX = panelSizeX;
-		this.panelSizeY = panelSizeY;
 		this.radius = radius;
 		populatePointData();
 	}
@@ -141,8 +133,6 @@ public class Shape {
 	@Override
 	public int hashCode() {
 		int result = id;
-		result = 31 * result + getPanelSizeY();
-		result = 31 * result + getPanelSizeX();
 		result = 31 * result + getWidth();
 		result = 31 * result + getHeight();
 		result = 31 * result + getLocX();
@@ -168,14 +158,6 @@ public class Shape {
 
 	public int[] getY() {
 		return y;
-	}
-
-	public int getPanelSizeY() {
-		return panelSizeY;
-	}
-
-	public int getPanelSizeX() {
-		return panelSizeX;
 	}
 
 	public int getWidth() {
