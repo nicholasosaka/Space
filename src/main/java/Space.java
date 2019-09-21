@@ -81,13 +81,6 @@ public class Space {
 		this.panel.removeShape(shape);
 	}
 
-	/**
-	 * Method to remove shape from Space
-	 * @param index index of the shape to remove
-	 */
-	public void remove(int index){
-		this.panel.remove(index);
-	}
 
 	/**
 	 * Method to remove all shapes from Space

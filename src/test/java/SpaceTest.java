@@ -120,13 +120,6 @@ public class SpaceTest {
 		assertEquals(0, space.getShapes().size());
 	}
 
-	@Test
-	public void removeByIndex() {
-		space.addShape(250, 250, 100);
-		space.remove(0);
-
-		assertEquals(0, space.getShapes().size());
-	}
 
 	@Test
 	public void removeAll() {
