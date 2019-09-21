@@ -80,7 +80,7 @@ public class SpaceTest {
 
 	@Test
 	public void pointInSpaceTrue(){
-		Shape p = new Shape(3, 250, 250, 5);
+		Point p = new Point(250, 250);
 		space.addShape(250, 250, 100);
 
 		assertTrue(space.isPointInSpace(250, 250));
@@ -90,7 +90,7 @@ public class SpaceTest {
 
 	@Test
 	public void pointInSpaceFalse(){
-		Shape p = new Shape(3,5, 5, 5);
+		Point p = new Point(3, 3);
 		space.addShape(250, 250, 50);
 
 		assertFalse(space.isPointInSpace(455, 455));
