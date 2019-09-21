@@ -32,9 +32,7 @@ public class Space {
 	 * @param shape shape to add
 	 */
 	public void addShape(Shape shape){
-		if(shape != null){
-			this.panel.addShape(shape);
-		}
+		this.panel.addShape(shape);
 		update();
 	}
 
@@ -59,7 +57,7 @@ public class Space {
 	 * @param radius radius of the shape
 	 */
 	public void addShape(int locX, int locY, int radius){
-		Shape s = new Shape(3, locX, locY, radius);
+		Circle s = new Circle(locX, locY, radius);
 		this.panel.addShape(s);
 		update();
 	}
@@ -70,7 +68,7 @@ public class Space {
 	 * @param y y coordinate of point
 	 */
 	public void addPoint(int x, int y){
-		Shape p = new Shape(3, x, y, 10);
+		Point p = new Point(x,y);
 		this.panel.addShape(p);
 		update();
 	}
@@ -226,7 +224,7 @@ public class Space {
 	 * @param point point to check
 	 * @return true if point is within a shape in Space, false otherwise
 	 */
-	public boolean isPointInSpace(Shape point){
+	public boolean isPointInSpace(Point point){
 		if(point == null) return false;
 
 		for(Shape s : this.panel.getShapes()){
