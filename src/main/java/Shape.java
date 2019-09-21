@@ -109,7 +109,9 @@ public class Shape {
 		int verticies = (shape.getID() == 0) ? 3 : (((shape.getID() == 2) || (shape.getID() == 3)) ? 4 : 0);
 
 		for(int i = 0; i < verticies; i++){
-			if(isPointInShape(shape.getX()[i], shape.getY()[i])) return true;
+			if(isPointInShape(shape.getX()[i], shape.getY()[i])) return true;   //checks intersection of other shape
+
+			if(shape.isPointInShape(getX()[i], getY()[i])) return true; //checks against self
 		}
 
 		return false;
