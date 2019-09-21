@@ -107,7 +107,7 @@ public class Space {
 		if(shape == null) return;
 
 		try {
-			for (int i = 0; i < pixels; i += increment) {
+			for (int i = 0; i < pixels; i += increment) {   //moves shape over number of pixels in steps of increment.
 				shape.setLocX(shape.getLocX() - increment);
 				shape.populatePointData();
 
@@ -130,7 +130,7 @@ public class Space {
 		if(shape == null) return;
 
 		try {
-			for (int i = 0; i < pixels; i += increment) {
+			for (int i = 0; i < pixels; i += increment) { //moves shape over number of pixels in steps of increment.
 				shape.setLocX(shape.getLocX() + increment);
 				shape.populatePointData();
 
@@ -153,7 +153,7 @@ public class Space {
 		if(shape == null) return;
 
 		try {
-			for (int i = 0; i < pixels; i += increment) {
+			for (int i = 0; i < pixels; i += increment) { //moves shape over number of pixels in steps of increment.
 				shape.setLocY(shape.getLocY() - increment);
 				shape.populatePointData();
 
@@ -176,7 +176,7 @@ public class Space {
 		if(shape == null) return;
 
 		try {
-			for (int i = 0; i < pixels; i += increment) {
+			for (int i = 0; i < pixels; i += increment) { //moves shape over number of pixels in steps of increment.
 				shape.setLocY(shape.getLocY() + increment);
 				shape.populatePointData();
 

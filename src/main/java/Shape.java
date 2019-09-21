@@ -9,7 +9,7 @@ public class Shape {
 	private int[] x = new int[4];
 	private int[] y = new int[4];
 
-	Shape(int id,int locX, int locY, int width, int height) {
+	Shape(int id, int locX, int locY, int width, int height) {   //constructor
 		this.id = id;
 		this.locY = locY;
 		this.locX = locX;
@@ -18,7 +18,7 @@ public class Shape {
 		populatePointData();
 	}
 
-	Shape(int id, int locX, int locY, int radius){
+	Shape(int id, int locX, int locY, int radius){  //contructor for circles
 		this.id = id;
 		this.locY = locY;
 		this.locX = locX;
@@ -26,7 +26,7 @@ public class Shape {
 		populatePointData();
 	}
 
-	protected void populatePointData(){
+	protected void populatePointData(){ //branches for different kinds of points
 		if(this.id == 0){
 			setTrianglePoints();
 		} else if (this.id == 1 || this.id == 2){
@@ -36,7 +36,7 @@ public class Shape {
 		}
 	}
 
-	private void setCircularPoints() {
+	private void setCircularPoints() {  //sets points at four equidistant points around circles edge
 		x[0] = this.locX - this.radius/2;
 		x[1] = this.locX + this.radius/2;
 
@@ -50,7 +50,7 @@ public class Shape {
 		y[3] = x[2];
 	}
 
-	private void setRectangularPoints() {
+	private void setRectangularPoints() {   //sets points at vertices
 		x[0] = this.locX - this.width/2;
 		x[1] = this.locX + this.width/2;
 
@@ -64,7 +64,7 @@ public class Shape {
 		y[3] = x[2];
 	}
 
-	private void setTrianglePoints(){
+	private void setTrianglePoints(){   //sets points at vertices
 		x[0] = this.locX - this.width/2;
 		y[0] = this.locY;
 
@@ -75,11 +75,12 @@ public class Shape {
 		y[2] = this.locY;
 	}
 
-	public boolean isPointInShape(int x, int y) {
+	public boolean isPointInShape(int x, int y) {   //checks if point is in a shape
 		if (this.getID() == 3) {
 			return Math.sqrt(Math.pow(this.locX - x, 2.0) + Math.pow(this.locY - y, 2.0)) < (double) this.radius;
 		} else if (this.getID() == 0){
 
+			//some really fancy linear algebra, thank you josiah
 			double[][] T = new double[2][2];
 
 			T[0][0] = this.x[0] - this.x[2];
