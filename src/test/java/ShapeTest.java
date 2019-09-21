@@ -10,8 +10,8 @@ public class ShapeTest {
 	@Before
 	public void setUp(){
 		space = new Space("Unit testing", 500, 500);
-		a = new Shape(3,100,100,100);
-		b = new Shape(3,400,400,100);
+		a = new Shape(100,100,100);
+		b = new Shape(400,400,100);
 		space.addShape(a);
 		space.addShape(b);
 	}

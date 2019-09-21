@@ -18,7 +18,7 @@ public class Shape {
 		populatePointData();
 	}
 
-	Shape(int id, int locX, int locY, int radius){  //contructor for circles
+	Shape(int locX, int locY, int radius){  //contructor for circles
 		this.id = id;
 		this.locY = locY;
 		this.locX = locX;

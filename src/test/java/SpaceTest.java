@@ -103,8 +103,8 @@ public class SpaceTest {
 
 	@Test
 	public void checkSpaceContents(){
-		Shape s = new Shape(3, 250, 250, 100);
-		Shape q = new Shape(3, 250, 250, 100);
+		Shape s = new Shape(250, 250, 100);
+		Shape q = new Shape(250, 250, 100);
 		space.addShape(s);
 
 		assertTrue(space.isShapeInSpace(s));
