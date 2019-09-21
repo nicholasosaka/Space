@@ -1,6 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 public class SpaceTest {
@@ -106,5 +109,49 @@ public class SpaceTest {
 
 		assertTrue(space.isShapeInSpace(s));
 		assertTrue(space.isShapeInSpace(q));
+	}
+
+	@Test
+	public void removeByObject() {
+		Triangle t = new Triangle(250, 250, 100, 100);
+		space.addShape(t);
+		space.remove(t);
+
+		assertEquals(0, space.getShapes().size());
+	}
+
+	@Test
+	public void removeByIndex() {
+		space.addShape(250, 250, 100);
+		space.remove(0);
+
+		assertEquals(0, space.getShapes().size());
+	}
+
+	@Test
+	public void removeAll() {
+		Random rand = new Random(System.currentTimeMillis());
+		for(int i = 0; i < 10; i++){
+			int x = rand.nextInt(500);
+			int y = rand.nextInt(500);
+			space.addPoint(x, y);
+		}
+
+		space.removeAll();
+		assertEquals(0, space.getShapes().size());
+	}
+
+	@Test
+	public void getShapes() {
+		ArrayList<Shape> list = new ArrayList<>();
+		for(int i = 0; i < 10; i++){
+			Shape s = new Shape(0, 250, 250, (i*10)+1, (i*10)+1);
+			space.addShape(s);
+			list.add(s);
+		}
+
+		assertEquals(10, space.getShapes().size());
+		assertEquals(list, space.getShapes());
+
 	}
 }

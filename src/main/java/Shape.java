@@ -105,9 +105,8 @@ public class Shape {
 	 */
 	public boolean intersect(Shape shape){
 		//TODO finish intersection logic
-		int verticies;
 
-		verticies = shape.getID() == 0 ? 3 : (shape.getID() == 2 || shape.getID() == 3) ? 4 : 0;
+		int verticies = (shape.getID() == 0) ? 3 : (((shape.getID() == 2) || (shape.getID() == 3)) ? 4 : 0);
 
 		for(int i = 0; i < verticies; i++){
 			if(isPointInShape(shape.getX()[i], shape.getY()[i])) return true;
