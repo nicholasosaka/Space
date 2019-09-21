@@ -19,7 +19,7 @@ public class Shape {
 	}
 
 	Shape(int locX, int locY, int radius){  //contructor for circles
-		this.id = id;
+		this.id = 3;
 		this.locY = locY;
 		this.locX = locX;
 		this.radius = radius;
