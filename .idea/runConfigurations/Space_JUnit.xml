@@ -2,7 +2,7 @@
   <configuration default="false" name="Space JUnit" type="JUnit" factoryName="JUnit" singleton="false" repeat_count="2" repeat_mode="N Times">
     <module name="Space" />
     <option name="PACKAGE_NAME" value="" />
-    <option name="MAIN_CLASS_NAME" value="SpaceTest" />
+    <option name="MAIN_CLASS_NAME" value="SpaceGameTest" />
     <option name="METHOD_NAME" value="" />
     <option name="TEST_OBJECT" value="class" />
     <option name="PARAMETERS" value="" />

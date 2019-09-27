@@ -5,15 +5,15 @@ import static org.junit.Assert.*;
 
 public class ShapeTest {
 
-	Space space;
+	SpaceGame spaceGame;
 	Shape a,b;
 	@Before
 	public void setUp(){
-		space = new Space("Unit testing", 500, 500);
+		spaceGame = new SpaceGame("Unit testing", 500, 500);
 		a = new Shape(100,100,100);
 		b = new Shape(400,400,100);
-		space.addShape(a);
-		space.addShape(b);
+		spaceGame.addShape(a);
+		spaceGame.addShape(b);
 	}
 
 	@Test

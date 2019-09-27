@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author Nikko Osaka
  * @date 9/7/2019
  */
-public class Space {
+public class SpaceGame {
 	private JFrame frame;
 	private Panel panel;
 	private int speed = 50;
@@ -17,7 +17,7 @@ public class Space {
 	 * @param width width of window
 	 * @param length length of window
 	 */
-	Space(String title, int width, int length){
+	SpaceGame(String title, int width, int length){
 		this.frame = new JFrame(title);
 		this.frame.setSize(width, length);
 		this.panel = new Panel(this.frame);
@@ -270,10 +270,10 @@ public class Space {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 
-		Space space = (Space) o;
+		SpaceGame spaceGame = (SpaceGame) o;
 
-		if (!frame.equals(space.frame)) return false;
-		return panel.equals(space.panel);
+		if (!frame.equals(spaceGame.frame)) return false;
+		return panel.equals(spaceGame.panel);
 	}
 
 	/**
