@@ -82,7 +82,7 @@ public class SpaceGameTest {
 	}
 
 	@Test
-	public void pointInSpaceTrue(){
+	public void pointInSpaceTrueViaObject(){
 		Point p = new Point(250, 250);
 		spaceGame.addShape(250, 250, 100);
 
@@ -92,13 +92,34 @@ public class SpaceGameTest {
 	}
 
 	@Test
-	public void pointInSpaceFalse(){
+	public void pointInSpaceFalseViaObject(){
 		Point p = new Point(3, 3);
 		spaceGame.addShape(250, 250, 50);
 
 		assertFalse(spaceGame.isPointInSpace(455, 455));
 
 		assertFalse(spaceGame.isPointInSpace(p));
+	}
+
+	@Test
+	public void pointInSpaceTrueViaParam(){
+
+		spaceGame.addShape(250, 250, 100);
+		spaceGame.addPoint(250,250);
+
+		assertTrue(spaceGame.isPointInSpace(250, 250));
+	}
+
+	@Test
+	public void pointInSpaceFalseViaParam(){
+		int x = 3;
+		int y = 3;
+		spaceGame.addShape(250, 250, 50);
+		spaceGame.addPoint(x,y);
+
+		assertFalse(spaceGame.isPointInSpace(455, 455));
+
+		assertFalse(spaceGame.isPointInSpace(x,y));
 	}
 
 	@Test
