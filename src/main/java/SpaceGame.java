@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
  * @author Nikko Osaka
@@ -204,11 +205,13 @@ public class SpaceGame {
 	 * @return true if point is within a shape in Space, false otherwise
 	 */
 	public boolean isPointInSpace(int x, int y){
+
+		Point p = new Point(x,y);
+
 		for(Shape s : this.panel.getShapes()){
-			if(s.isPointInShape(x,y)){
-				return true;
-			}
+			if(!p.equals(s)) return s.isPointInShape(x,y);
 		}
+
 		return false;
 	}
 
